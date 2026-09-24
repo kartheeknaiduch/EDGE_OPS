@@ -1,0 +1,19 @@
+{
+  "name": "edgeops-ai-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI infrastructure health assistant on Cloudflare: Workers AI (Llama 3.3), Workflows, Durable Objects",
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:mock": "wrangler dev --config wrangler.mock.jsonc",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260921.1",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "edgeops-ai-assistant-mock",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-09-01",
+  "vars": { "MOCK_AI": "1" },
+  "durable_objects": { "bindings": [{ "name": "SESSION", "class_name": "ChatSession" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ChatSession"] }],
+  "workflows": [
+    { "name": "edgeops-health-check-mock", "binding": "HEALTH_WORKFLOW", "class_name": "HealthCheckWorkflow" }
+  ],
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"] }
+}

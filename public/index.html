@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EdgeOps: infrastructure health assistant</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="board" aria-label="Latest health check">
+      <h1>EdgeOps</h1>
+      <p class="tag">Ask whether a site or API is healthy. A durable workflow probes it, Llama 3.3 summarises, and the result stays in memory for follow-ups.</p>
+      <div id="board-summary" class="board-summary">No check yet.</div>
+      <ul id="board" class="rows"></ul>
+      <button id="reset" type="button" class="quiet">Clear session</button>
+    </aside>
+    <main class="chat">
+      <ol id="log" class="log" aria-live="polite"></ol>
+      <form id="form" class="composer" autocomplete="off">
+        <label class="sr" for="input">Message</label>
+        <input id="input" name="message" maxlength="2000" placeholder="Is cloudflare.com and example.org healthy?" required>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
